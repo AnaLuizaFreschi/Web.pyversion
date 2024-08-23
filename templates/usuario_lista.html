@@ -1,0 +1,21 @@
+{% extends "base.html" %}
+
+{% block conteudo %}
+    
+    <a href="/usuario/add">+ Adicionar</a>
+    <table>
+        <tr>
+            <th>Nome</th>
+            <th>E-mail</th>
+            <th>Idade</th>
+        </tr>
+        {% for usuario in dados %}
+        <tr>
+            <td>{{usuario.nome}}</td>
+            <td>{{usuario.email}}</td>
+            <td>{{usuario.idade}}</td>
+        </tr>
+        {% endfor %}
+    </table>
+
+{% endblock %}
